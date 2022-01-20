@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptg-zR-AB4">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Dogs View Controller-->
+        <scene sceneID="Bht-th-bd8">
+            <objects>
+                <viewController id="Ptg-zR-AB4" customClass="RandomDogsViewController" customModule="DogsApiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8a5-h5-bwr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="eze-3e-qpC">
+                                <rect key="frame" x="20" y="65" width="280" height="275"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press start to see random dog" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-nU-y1t">
+                                <rect key="frame" x="81" y="382" width="159" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iie-0m-Lyg">
+                                <rect key="frame" x="119" y="468" width="83" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="Ptg-zR-AB4" eventType="touchUpInside" id="yAJ-ln-PCo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oPd-ed-hPE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iie-0m-Lyg" firstAttribute="leading" secondItem="oPd-ed-hPE" secondAttribute="leading" constant="119" id="0sa-s5-3fe"/>
+                            <constraint firstItem="oPd-ed-hPE" firstAttribute="trailing" secondItem="eze-3e-qpC" secondAttribute="trailing" constant="20" id="7gJ-R5-Viw"/>
+                            <constraint firstItem="l5Y-nU-y1t" firstAttribute="leading" secondItem="oPd-ed-hPE" secondAttribute="leading" constant="81" id="9kB-MO-iuJ"/>
+                            <constraint firstItem="oPd-ed-hPE" firstAttribute="bottom" secondItem="iie-0m-Lyg" secondAttribute="bottom" constant="69" id="B0a-Kq-Y44"/>
+                            <constraint firstItem="eze-3e-qpC" firstAttribute="top" secondItem="oPd-ed-hPE" secondAttribute="top" constant="65" id="KOj-X3-Ozc"/>
+                            <constraint firstItem="oPd-ed-hPE" firstAttribute="trailing" secondItem="iie-0m-Lyg" secondAttribute="trailing" constant="118" id="Yoz-1t-NLq"/>
+                            <constraint firstItem="eze-3e-qpC" firstAttribute="leading" secondItem="oPd-ed-hPE" secondAttribute="leading" constant="20" id="aad-hg-94U"/>
+                            <constraint firstItem="iie-0m-Lyg" firstAttribute="top" secondItem="l5Y-nU-y1t" secondAttribute="bottom" constant="43" id="qMp-Gj-LAk"/>
+                            <constraint firstItem="l5Y-nU-y1t" firstAttribute="top" secondItem="eze-3e-qpC" secondAttribute="bottom" constant="42" id="yu4-LW-2LK"/>
+                            <constraint firstItem="oPd-ed-hPE" firstAttribute="trailing" secondItem="l5Y-nU-y1t" secondAttribute="trailing" constant="80" id="zgj-i7-gS7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="randomDogImage" destination="eze-3e-qpC" id="c0a-Wt-DFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2Z-Se-df3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244.375" y="-16.901408450704224"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pngwing.com" width="823" height="921"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
